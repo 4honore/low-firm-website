@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import Button from './Button';
 import { useTranslations } from 'next-intl';
 
 export default function ContactForm() {
     const t = useTranslations('ContactForm');
+    const form = useRef<HTMLFormElement>(null); // Add useRef for the form
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -19,20 +21,23 @@ export default function ContactForm() {
         e.preventDefault();
         setStatus('loading');
 
-        try {
-            const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+        const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+        const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-            if (response.ok) {
+        if (!serviceID || !templateID || !publicKey) {
+            console.error("EmailJS environment variables are not set.");
+            setStatus('error');
+            return;
+        }
+
+        try {
+            if (form.current) {
+                await emailjs.sendForm(serviceID, templateID, form.current, publicKey);
                 setStatus('success');
-                setFormData({ name: '', email: '', phone: '', legalIssue: '', message: '' });
+                setFormData({ name: '', email: '', phone: '', legalIssue: '', message: '' }); // Clear form
             } else {
-                setStatus('error');
+                throw new Error("Form reference is not available.");
             }
         } catch (error) {
             console.error('Contact form submission error:', error);
@@ -48,7 +53,7 @@ export default function ContactForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form ref={form} onSubmit={handleSubmit} className="space-y-6">
             <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     {t('labels.name')}

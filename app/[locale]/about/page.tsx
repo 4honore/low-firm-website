@@ -77,48 +77,57 @@ export default function AboutPage() {
                                             <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                                         </svg>
                                     </div>
-                                    <h3 className="text-2xl font-bold">{t('counsel.name')}</h3>
-                                    <p className="text-accent-200 mt-2">{t('counsel.role')}</p>
+                                    <h3 className="text-2xl font-bold">NTAZIKA Néhémie</h3>
+                                    <p className="text-accent-200 mt-2">Principal Counsel</p>
                                 </div>
                             </div>
 
                             <div className="md:w-2/3">
-                                <h3 className="text-2xl font-semibold mb-4 text-primary-700">{t('counsel.background.title')}</h3>
+                                <h3 className="text-2xl font-semibold mb-4 text-primary-700">Meet Your Advocate</h3>
                                 <p className="text-gray-700 leading-relaxed mb-6">
-                                    {t('counsel.background.description')}
+                                    NTAZIKA Néhémie is a distinguished member of the Rwanda Bar Association, bringing over a decade of 
+                                    dedicated legal practice to serve both corporate and individual clients. With a deep understanding 
+                                    of Rwanda's legal landscape and a proven track record across multiple legal disciplines, he has 
+                                    established himself as a trusted counsel for those seeking justice and sound legal guidance.
                                 </p>
 
-                                <h4 className="text-xl font-semibold mb-3 text-primary-700">{t('counsel.expertise.title')}</h4>
+                                <h4 className="text-xl font-semibold mb-3 text-primary-700">Practice Areas</h4>
                                 <ul className="space-y-2 mb-6">
                                     <li className="flex items-start">
                                         <svg className="w-5 h-5 text-accent-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                         </svg>
-                                        <span className="text-gray-700">{t('counsel.expertise.corporate')}</span>
+                                        <span className="text-gray-700">Banking & Financial Legal Services</span>
                                     </li>
                                     <li className="flex items-start">
                                         <svg className="w-5 h-5 text-accent-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                         </svg>
-                                        <span className="text-gray-700">{t('counsel.expertise.litigation')}</span>
+                                        <span className="text-gray-700">Debt Recovery & Collection Advisory</span>
                                     </li>
                                     <li className="flex items-start">
                                         <svg className="w-5 h-5 text-accent-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                         </svg>
-                                        <span className="text-gray-700">{t('counsel.expertise.criminal')}</span>
+                                        <span className="text-gray-700">Mediation & Alternative Dispute Resolution</span>
                                     </li>
                                     <li className="flex items-start">
                                         <svg className="w-5 h-5 text-accent-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                         </svg>
-                                        <span className="text-gray-700">{t('counsel.expertise.property')}</span>
+                                        <span className="text-gray-700">Legal Aid & Pro Bono Services</span>
                                     </li>
                                 </ul>
 
-                                <h4 className="text-xl font-semibold mb-3 text-primary-700">{t('counsel.commitment.title')}</h4>
+                                <h4 className="text-xl font-semibold mb-3 text-primary-700">Distinguished Service</h4>
                                 <p className="text-gray-700 leading-relaxed">
-                                    {t('counsel.commitment.description')}
+                                    What sets this practice apart is a rare combination of sophisticated corporate legal expertise and 
+                                    genuine commitment to social justice. NTAZIKA has provided counsel to major financial institutions 
+                                    including Caisse d'Entraide de Butare and Ecobank Rwanda, while simultaneously dedicating significant 
+                                    time to ensuring vulnerable populations—including indigent clients and minors—have access to quality 
+                                    legal representation. His work bridges the gap between commercial excellence and humanitarian service, 
+                                    embodying the highest ideals of the legal profession. Serving clients across Rwanda in French, English, 
+                                    Kinyarwanda, and Swahili, he ensures clear communication and cultural understanding in every case.
                                 </p>
                             </div>
                         </div>

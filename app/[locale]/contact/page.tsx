@@ -66,7 +66,7 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="font-semibold text-lg mb-1">{t('info.email')}</h3>
                                         <a href="mailto:ishimwehonore450@gmail.com" className="text-gray-700 hover:text-accent-600 transition-colors">
-                                            ishimwehonore450@gmail.com
+                                            ntazikan@gmail.com
                                         </a>
                                     </div>
                                 </div>
